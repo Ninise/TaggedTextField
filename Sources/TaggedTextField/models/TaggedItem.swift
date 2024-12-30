@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - Tagged Item Protocol
 /// Protocol for items that can be tagged within the text field.
-protocol TaggedItem: Identifiable {
+public protocol TaggedItem: Identifiable {
     func displayName() -> String
     func taggedDisplayText() -> String
 }

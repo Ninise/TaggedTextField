@@ -2,7 +2,7 @@ import SwiftUI
 
 // MARK: - Main View
 /// A text field with tagging functionality, allowing users to select tagged items from a search.
-struct TaggedTextFieldView<T: TaggedItem>: View {
+public struct TaggedTextFieldView<T: TaggedItem>: View {
     @Environment(\.colorScheme) var colorScheme
     
     // MARK: - Properties
@@ -22,7 +22,7 @@ struct TaggedTextFieldView<T: TaggedItem>: View {
     private let SEND_ICON = "paperplane.fill"
     
     // MARK: - Body
-    var body: some View {
+    public var body: some View {
         ZStack(alignment: .topLeading) {
             searchPopover
             
@@ -96,7 +96,6 @@ struct TaggedTextFieldView<T: TaggedItem>: View {
         withAnimation {
             isTextInsertion = true
             
-            // Ensure we're on the main thread for UI updates
             DispatchQueue.main.async {
                 text = text.replacingOccurrences(
                     of: toReplace,
@@ -109,7 +108,6 @@ struct TaggedTextFieldView<T: TaggedItem>: View {
                 onSelectItem(item)
                 showSearchPopover = false
                 
-                // Add a slight delay before setting isTextInsertion back to false
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                     isTextInsertion = false
                 }
