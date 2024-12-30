@@ -3,6 +3,9 @@
 [![Swift Version](https://img.shields.io/badge/Swift-5.5-orange.svg)](https://swift.org)
 [![Platform](https://img.shields.io/badge/Platform-iOS%20%7C%20macOS%20%7C%20watchOS%20%7C%20tvOS-lightgrey.svg)](https://developer.apple.com)
 
+<p>
+  <img src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdndvNGI5N2hrOGFteWV5eWE5YnZtcnk4OGFqZDl0Nmg3NXUyZjI5byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/VgKcRdWzvEzK8vYKG1/giphy-downsized-large.gif" width="225">
+</p>
 A SwiftUI text field with tagging functionality, allowing users to easily mention or tag items from a searchable list.
 
 ## Usage
