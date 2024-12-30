@@ -3,6 +3,22 @@ import SwiftUI
 // MARK: - Main View
 /// A text field with tagging functionality, allowing users to select tagged items from a search.
 public struct TaggedTextFieldView<T: TaggedItem>: View {
+    
+    public init(text: Binding<String>,
+                tagConfig: TagConfiguration,
+                onSearch: @escaping (String, String) -> Void,
+                onSubmit: @escaping (String) -> Void,
+                onSelectItem: @escaping (T) -> Void,
+                searchResults: [T]) {
+        self._text = text
+        self.tagConfig = tagConfig
+        self.onSearch = onSearch
+        self.onSubmit = onSubmit
+        self.onSelectItem = onSelectItem
+        self.searchResults = searchResults
+    }
+    
+    
     @Environment(\.colorScheme) var colorScheme
     
     // MARK: - Properties
